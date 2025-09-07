@@ -18,11 +18,11 @@ The concatenated pooled representations are passed through a 3-layer MLP classif
 # Environment Setup
 Dependencies
 Python 3.11.13；
-PyTorch >= 1.12；
-scikit-learn；
-pandas, numpy；
-optuna；
-gradio_client (for embedding API call)
+PyTorch  2.3.1；
+scikit-learn 1.7.1；
+pandas 2.3.1；numpy 1.26.4；
+optuna 4.4.0；
+gradio_client (for embedding API call)1.10.4
 
 # Running the Embedding Server
 We follow https://www.bilibili.com/video/BV1gnMfzpE8M/?spm_id_from=333.1387.favlist.content.click&vd_source=49997804e3d2d06ca11e20d30162e95e
