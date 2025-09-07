@@ -68,6 +68,10 @@ Each token → embedded into a 32-dimensional vector via Qwen3-Embedding-4B.
 
 Inspired by TabTransformer [[Huang et al., NeurIPS 2020](https://github.com/lucidrains/tab-transformer-pytorch)], each structured/unstructured entry is treated as a semantic token.
 
+Intra-modal Self-Attention
+
+Bidirectional Cross-Modal Attention (BiDAF-inspired)
+
 Masked Pooling & Fusion
 
 Structured: mean pooling 
