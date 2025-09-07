@@ -17,9 +17,17 @@ The concatenated pooled representations are passed through a 3-layer MLP classif
 
 # Environment Setup
 Dependencies
-Python 3.11.13
-PyTorch >= 1.12
-scikit-learn
-pandas, numpy
-optuna
+Python 3.11.13；
+PyTorch >= 1.12；
+scikit-learn；
+pandas, numpy；
+optuna；
 gradio_client (for embedding API call)
+
+# Running the Embedding Server
+We follow https://www.bilibili.com/video/BV1gnMfzpE8M/?spm_id_from=333.1387.favlist.content.click&vd_source=49997804e3d2d06ca11e20d30162e95e
+ to launch a local Gradio server exposing the Qwen3-Embedding-4B model.
+ After installation, run:
+python qwen3_embedding.py
+You should see output like:
+Running on local URL:  http://127.0.0.1:7860
