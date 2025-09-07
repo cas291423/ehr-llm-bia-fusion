@@ -14,3 +14,12 @@ Intra-modal dependencies are modeled by self-attention layers.
 Cross-modal alignment is performed using bidirectional attention ([inspired by BiDAF README.md](https://github.com/galsang/BiDAF-pytorch/blob/master/README.md#bidaf-pytorch)]).
 A masked pooling layer ensures padded [MASK] tokens do not interfere with downstream computations.
 The concatenated pooled representations are passed through a 3-layer MLP classifier with hidden sizes [256, 128, 64].
+
+# Environment Setup
+Dependencies
+Python 3.11.13
+PyTorch >= 1.12
+scikit-learn
+pandas, numpy
+optuna
+gradio_client (for embedding API call)
