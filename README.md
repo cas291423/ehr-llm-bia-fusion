@@ -31,3 +31,40 @@ We follow https://www.bilibili.com/video/BV1gnMfzpE8M/?spm_id_from=333.1387.favl
 python qwen3_embedding.py
 You should see output like:
 Running on local URL:  http://127.0.0.1:7860
+
+# Step 1: Generate Embeddings (Q3E.py)
+Input: sampled_data_share.xlsx (31 structured features + 1 text column + 1 label column).
+
+Output: embedding_sampled_data_share.xlsx
+
+For each structured column: a new {col}_emb column containing a 32-dimensional JSON vector.
+
+For the text column: 23 sentence columns {text_col}_sent{i} each holding a 32-dimensional JSON vector or "MASK".
+
+The label column is preserved unchanged.
+
+why？？23 sentence columns--The sample with the most segmented text contains 23 text data entries.
+
+# Step 2: Train Multimodal Fusion Model (BiAttnFusionSeq.py)
+What happens:
+
+Dataset is split 8:1:1 into train/validation/test.
+
+Self-attention and BiAttn modules are trained end-to-end.
+
+A 3-layer MLP classifier with hidden sizes [256,128,64] produces predictions.
+
+Validation PR-AUC (macro) is used as the selection criterion.
+
+# Model Architecture
+
+Semantic Serialization (TabTransformer-style tokens)
+
+Structured indicators are textualized into [indicator_name, value, definition].
+
+Clinical narratives are segmented into sentence tokens (t_1, …, t_n), normalized to 23 with [MASK] padding.
+
+Each token → embedded into a 32-dimensional vector via Qwen3-Embedding-4B.
+
+Inspired by TabTransformer [[Huang et al., NeurIPS 2020](https://github.com/lucidrains/tab-transformer-pytorch)], each structured/unstructured entry is treated as a semantic token.
+
