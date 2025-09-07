@@ -46,7 +46,6 @@ The label column is preserved unchanged.
 why？？23 sentence columns--The sample with the most segmented text contains 23 text data entries.
 
 # Step 2: Train Multimodal Fusion Model (BiAttnFusionSeq.py)
-What happens:
 
 Dataset is split 8:1:1 into train/validation/test.
 
