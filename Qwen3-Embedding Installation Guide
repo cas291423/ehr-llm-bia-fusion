@@ -1,3 +1,7 @@
+### Key Considerations：We follow https://www.bilibili.com/video/BV1gnMfzpE8M/?spm_id_from=333.1387.favlist.content.click&vd_source=49997804e3d2d06ca11e20d30162e95e to launch a local Gradio server exposing the Qwen3-Embedding-4B model. 
+
+###
+
 # Qwen3-Embedding Installation Guide
 # 1. Create a Conda Virtual Environment
 # Create a new conda environment named qwen3-embedding-reranker with Python 3.11
