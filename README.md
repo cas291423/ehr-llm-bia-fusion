@@ -25,7 +25,7 @@ optuna 4.4.0；
 gradio_client (for embedding API call)1.10.4
 
 # Running the Embedding Server 
-
+Installation Guide for Large Language Models Document: Qwen3-Embedding Installation Guide
  After installation, run:
 python qwen3_embedding.py
 You should see output like:
