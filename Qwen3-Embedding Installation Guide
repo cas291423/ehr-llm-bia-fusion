@@ -1,0 +1,37 @@
+# Qwen3-Embedding Installation Guide
+# 1. Create a Conda Virtual Environment
+# Create a new conda environment named qwen3-embedding-reranker with Python 3.11
+conda create -n qwen3-embedding-reranker python=3.11
+
+# Activate the environment
+conda activate qwen3-embedding-reranker
+
+# 2. Configure pip Mirror (Optional, for faster downloads in some regions)
+# Set Aliyun mirror as the global pip source
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+
+# Check pip configuration
+pip config list
+
+# 3. Install Dependencies
+# 3.1 Install PyTorch
+
+# Visit the PyTorch official website and install the version that matches your CUDA setup. Example (CPU only):
+
+pip install torch torchvision torchaudio
+
+# 3.2 Install Other Required Packages
+pip install modelscope transformers gradio==5.35.0 flask
+
+# 4. Download the Code
+# Unzip the provided code package and navigate into the root directory
+cd C:\Code\qwen3-embedding-reranker\Qwen3-Embedding-4B
+
+# 5. Download Qwen3 Model
+# Download Qwen3-Embedding-4B (requires ~16GB)
+modelscope download --model Qwen/Qwen3-Embedding-4B --local_dir models/Qwen3-Embedding-4B
+
+# 6. Start Qwen3 Embedding Service
+python qwen3_embedding.py
+
+###
