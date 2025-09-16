@@ -24,9 +24,8 @@ pandas 2.3.1；numpy 1.26.4；
 optuna 4.4.0；
 gradio_client (for embedding API call)1.10.4
 
-# Running the Embedding Server
-We follow https://www.bilibili.com/video/BV1gnMfzpE8M/?spm_id_from=333.1387.favlist.content.click&vd_source=49997804e3d2d06ca11e20d30162e95e
- to launch a local Gradio server exposing the Qwen3-Embedding-4B model.
+# Running the Embedding Server 
+
  After installation, run:
 python qwen3_embedding.py
 You should see output like:
