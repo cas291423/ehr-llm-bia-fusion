@@ -24,7 +24,7 @@ pandas 2.3.1；numpy 1.26.4；
 optuna 4.4.0；
 gradio_client (for embedding API call)1.10.4
 
-# Running the Embedding Server 
+# Running the Embedding Server ( Qwen3-Embedding Installation Guide)
 Installation Guide for Large Language Models Document: Qwen3-Embedding Installation Guide
  After installation, run:
 python qwen3_embedding.py
